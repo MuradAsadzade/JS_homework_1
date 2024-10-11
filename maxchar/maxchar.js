@@ -6,8 +6,6 @@ function maxChar(str) {
 
         charMap[char] = charMap[char] + 1 || 1;
     }
-
-    // Find the character with the highest count
     for (let char in charMap) {
         if (charMap[char] > max) {
             max = charMap[char];

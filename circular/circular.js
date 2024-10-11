@@ -1,6 +1,3 @@
-
-
-// Circular detection function
 function circular(list) {
     let slow = list.head;
     let fast = list.head;
@@ -10,10 +7,10 @@ function circular(list) {
         fast = fast.next.next;
 
         if (slow === fast) {
-            return true; // The list is circular
+            return true; 
         }
     }
 
-    return false; // The list is not circular
+    return false; 
 }
 module.exports=circular;

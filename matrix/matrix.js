@@ -20,20 +20,19 @@ function matrix(n) {
             result[i][endCol] = counter;
             counter++;
         }
-        endCol--; // Move the right boundary left
+        endCol--;
 
         for (let i = endCol; i >= startCol; i--) {
             result[endRow][i] = counter;
             counter++;
         }
-        endRow--; // Move the bottom boundary up
+        endRow--; 
 
-        // Fill the left column (bottom to top)
         for (let i = endRow; i >= startRow; i--) {
             result[i][startCol] = counter;
             counter++;
         }
-        startCol++; // Move the left boundary right
+        startCol++; 
     }
 
     return result;

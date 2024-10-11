@@ -1,16 +1,13 @@
 class Queue {
     constructor() {
-        this.data = [];  // Initialize an empty array to hold the queue elements
+        this.data = [];  
     }
-
-    // Method to add an element to the queue
     add(value) {
-        this.data.push(value);  // Adds the value to the end of the array
+        this.data.push(value); 
     }
 
-    // Method to remove and return the first element of the queue
     remove() {
-        return this.data.shift();  // Removes and returns the first element of the array
+        return this.data.shift();  
     }
 }
 

@@ -14,7 +14,7 @@ class Node {
                 this.left = new Node(data);
             }
         } else if (data > this.data) {
-            // Insert into the right subtree
+     
             if (this.right) {
                 this.right.insert(data);
             } else {

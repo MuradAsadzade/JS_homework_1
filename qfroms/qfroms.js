@@ -1,25 +1,25 @@
-const Stack = require('./stack');  // Assuming there's a Stack implementation
+const Stack = require('./stack');  
 
 class Queue {
     constructor() {
-        this.stack1 = new Stack();  // Primary stack
-        this.stack2 = new Stack();  // Secondary stack
+        this.stack1 = new Stack();  
+        this.stack2 = new Stack();  
     }
 
     add(value) {
-        this.stack1.push(value);  // Push value onto stack1
+        this.stack1.push(value);  
     }
 
     remove() {
-        // Transfer elements to stack2 if it's empty
+    
         while (this.stack1.data.length!==0) {
             this.stack2.push(this.stack1.pop());
         }
 
-        // Pop from stack2 (the front of the queue)
+    
         const removedValue = this.stack2.pop();
 
-        // Transfer back the elements if necessary (optional)
+        
         while (this.stack2.data.length!==0) {
             this.stack1.push(this.stack2.pop());
         }
@@ -28,15 +28,14 @@ class Queue {
     }
 
     peek() {
-        // Transfer elements to stack2 if it's empty
+
         while (this.stack1.data.length!==0) {
             this.stack2.push(this.stack1.pop());
         }
 
-        // Peek at the front of the queue (top of stack2)
+   
         const peekValue = this.stack2.peek();
 
-        // Transfer back the elements if necessary (optional)
         while (this.stack2.data.length!==0) {
             this.stack1.push(this.stack2.pop());
         }

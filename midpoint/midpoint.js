@@ -3,11 +3,11 @@ function midpoint(list) {
     let fast = list.getFirst(); 
 
     while (fast.next && fast.next.next) {
-        slow = slow.next;         // Move slow by one node
-        fast = fast.next.next;    // Move fast by two nodes
+        slow = slow.next;         
+        fast = fast.next.next;    
     }
 
-    return slow;  // Slow pointer will be at the middle node
+    return slow; 
 }
 
 module.exports = midpoint;
